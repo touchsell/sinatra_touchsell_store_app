@@ -7,9 +7,9 @@ load 'env.rb' if File.exists?('env.rb')
 
 module Sinatra
   module OAuth2Store
-    DEFAULT_API_HOST='http://bo.simkim.tns/'
+    DEFAULT_API_HOST='https://bo.touch-sell.net/'
 
-    DEFAULT_OAUTH2_PROVIDER='http://bo.simkim.tns/'
+    DEFAULT_OAUTH2_PROVIDER='https://bo.touch-sell.net/'
 
     module Helpers
 
