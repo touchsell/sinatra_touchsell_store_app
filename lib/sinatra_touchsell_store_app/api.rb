@@ -12,7 +12,7 @@ class TSAPI
 
   def get url, params={}
     params[:access_token] = @token
-    puts "get: #{@base_url}#{url} with params #{params}"
+    #puts "get: #{@base_url}#{url} with params #{params}"
     RestClient.get "#{@base_url}#{url}", {
       params: params,
     }
@@ -38,6 +38,14 @@ class TSAPI
 
   def current_user
     parse( get("me") )
+  end
+
+  def get_clients(params={})
+    parse( get("/clients", params) )
+  end
+
+  def get_kpi(params={})
+    parse( get("/stats/kpi", params) )
   end
 
   def get_nodes(params={})
